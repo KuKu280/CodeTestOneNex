@@ -8,10 +8,11 @@ target 'CodingTestOneNex' do
   # Pods for CodingTestOneNex
 
   pod 'Alamofire', '5.6.4'
-  pod 'ReachabilitySwift'
   # Network debugging tool
   #
   # Shake to display network activities
   pod 'netfox'
+  
+  
 
 end

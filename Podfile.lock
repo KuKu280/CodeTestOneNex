@@ -1,24 +1,20 @@
 PODS:
   - Alamofire (5.6.4)
   - netfox (1.21.0)
-  - ReachabilitySwift (5.0.0)
 
 DEPENDENCIES:
   - Alamofire (= 5.6.4)
   - netfox
-  - ReachabilitySwift
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - netfox
-    - ReachabilitySwift
 
 SPEC CHECKSUMS:
   Alamofire: 4e95d97098eacb88856099c4fc79b526a299e48c
   netfox: 9d5cc727fe7576c4c7688a2504618a156b7d44b7
-  ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
 
-PODFILE CHECKSUM: e851520ff4142d4dc3e2ca5adbe49a98fc97b312
+PODFILE CHECKSUM: a9ae1bf2fd58f59e40b11a08a2fcf94744b55925
 
 COCOAPODS: 1.11.3
