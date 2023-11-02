@@ -20,7 +20,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="ePO-f8-lMB">
-                    <rect key="frame" x="10" y="10" width="373" height="74.333333333333343"/>
+                    <rect key="frame" x="10" y="0.0" width="373" height="74.333333333333329"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="4P1-sG-xyi">
                             <rect key="frame" x="0.0" y="0.0" width="373" height="74.333333333333329"/>
@@ -200,7 +200,7 @@
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ePO-f8-lMB" secondAttribute="trailing" constant="10" id="6QY-ND-Usq"/>
                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ePO-f8-lMB" secondAttribute="bottom" id="FHF-jN-OrK"/>
-                <constraint firstItem="ePO-f8-lMB" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="gmR-7V-zgZ"/>
+                <constraint firstItem="ePO-f8-lMB" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="gmR-7V-zgZ"/>
                 <constraint firstItem="ePO-f8-lMB" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="gmU-Nn-h1k"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

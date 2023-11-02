@@ -14,7 +14,7 @@
             <rect key="frame" x="0.0" y="0.0" width="466" height="200"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="promotion" translatesAutoresizingMaskIntoConstraints="NO" id="4jU-X2-Szs">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="specialpromotion" translatesAutoresizingMaskIntoConstraints="NO" id="4jU-X2-Szs">
                     <rect key="frame" x="0.0" y="0.0" width="466" height="200"/>
                 </imageView>
             </subviews>
@@ -31,7 +31,7 @@
         </view>
     </objects>
     <resources>
-        <image name="promotion" width="97.333335876464844" height="38"/>
+        <image name="specialpromotion" width="97.333335876464844" height="38"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

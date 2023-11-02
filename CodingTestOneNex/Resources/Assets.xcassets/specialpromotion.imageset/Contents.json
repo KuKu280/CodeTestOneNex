@@ -1,7 +1,6 @@
 {
   "images" : [
     {
-      "filename" : "Screenshot 2023-11-03 at 12.30.25 AM.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -10,6 +9,7 @@
       "scale" : "2x"
     },
     {
+      "filename" : "Screenshot 2023-11-03 at 12.17.41 AM.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
