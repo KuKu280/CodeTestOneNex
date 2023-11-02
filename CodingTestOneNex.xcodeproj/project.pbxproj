@@ -25,6 +25,8 @@
 		786F68532AF3B39B004E59F7 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786F68522AF3B39B004E59F7 /* UIView+Ext.swift */; };
 		786F68592AF3C745004E59F7 /* HomeController+IB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786F68582AF3C745004E59F7 /* HomeController+IB.swift */; };
 		78AEED91F5A983E7B4EDFA01 /* Pods_CodingTestOneNex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBF33517C38DC8FBAE880F9A /* Pods_CodingTestOneNex.framework */; };
+		78B65E2F2AF3D07F0028B84A /* RewardSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B65E2E2AF3D07F0028B84A /* RewardSectionView.swift */; };
+		78B65E312AF3D08F0028B84A /* RewardSectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78B65E302AF3D08F0028B84A /* RewardSectionView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -61,6 +63,8 @@
 		786F68502AF3AB4F004E59F7 /* UIImage+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Ext.swift"; sourceTree = "<group>"; };
 		786F68522AF3B39B004E59F7 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 		786F68582AF3C745004E59F7 /* HomeController+IB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeController+IB.swift"; sourceTree = "<group>"; };
+		78B65E2E2AF3D07F0028B84A /* RewardSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardSectionView.swift; sourceTree = "<group>"; };
+		78B65E302AF3D08F0028B84A /* RewardSectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RewardSectionView.xib; sourceTree = "<group>"; };
 		DBF33517C38DC8FBAE880F9A /* Pods_CodingTestOneNex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CodingTestOneNex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9D8DE0DE8DD1979A26E70C5 /* Pods-CodingTestOneNex.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodingTestOneNex.debug.xcconfig"; path = "Target Support Files/Pods-CodingTestOneNex/Pods-CodingTestOneNex.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -216,6 +220,7 @@
 		786F68432AF3A14B004E59F7 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				78B65E2C2AF3D04A0028B84A /* view */,
 				786F68442AF3A14F004E59F7 /* controller */,
 			);
 			path = Home;
@@ -238,6 +243,23 @@
 				786F68522AF3B39B004E59F7 /* UIView+Ext.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		78B65E2C2AF3D04A0028B84A /* view */ = {
+			isa = PBXGroup;
+			children = (
+				78B65E2D2AF3D0500028B84A /* RewardSection */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		78B65E2D2AF3D0500028B84A /* RewardSection */ = {
+			isa = PBXGroup;
+			children = (
+				78B65E2E2AF3D07F0028B84A /* RewardSectionView.swift */,
+				78B65E302AF3D08F0028B84A /* RewardSectionView.xib */,
+			);
+			path = RewardSection;
 			sourceTree = "<group>";
 		};
 		7EDBFFFE6285C5AB90C00A5D /* Frameworks */ = {
@@ -311,6 +333,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				786F67E12AF363EF004E59F7 /* LaunchScreen.storyboard in Resources */,
+				78B65E312AF3D08F0028B84A /* RewardSectionView.xib in Resources */,
 				786F68312AF398FF004E59F7 /* Color.xcassets in Resources */,
 				786F67DE2AF363EF004E59F7 /* Assets.xcassets in Resources */,
 				786F68482AF3A172004E59F7 /* HomeController.xib in Resources */,
@@ -377,6 +400,7 @@
 				786F68512AF3AB4F004E59F7 /* UIImage+Ext.swift in Sources */,
 				786F684C2AF3A298004E59F7 /* App.swift in Sources */,
 				786F68472AF3A172004E59F7 /* HomeController.swift in Sources */,
+				78B65E2F2AF3D07F0028B84A /* RewardSectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
