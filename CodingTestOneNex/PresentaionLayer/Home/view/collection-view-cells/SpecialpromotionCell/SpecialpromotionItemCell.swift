@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import UIComponents
 
 class SpecialpromotionItemCell: NibBasedCollectionViewCell {
 

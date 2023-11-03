@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import UIComponents
 
 class BannerView: NibBasedView {
     
