@@ -17,4 +17,11 @@ struct Article: Codable {
     let title: String?
     let content: String?
     let name: String?
+    let updatedAt: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case id, title, content, name
+        case updatedAt = "updated_at"
+    }
+    
 }

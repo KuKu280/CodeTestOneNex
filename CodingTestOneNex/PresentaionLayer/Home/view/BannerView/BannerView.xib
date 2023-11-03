@@ -7,6 +7,11 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BannerView" customModule="CodingTestOneNex" customModuleProvider="target">
             <connections>
@@ -20,13 +25,13 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="ePO-f8-lMB">
-                    <rect key="frame" x="10" y="0.0" width="373" height="74.333333333333329"/>
+                    <rect key="frame" x="10" y="0.0" width="373" height="72"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="4P1-sG-xyi">
-                            <rect key="frame" x="0.0" y="0.0" width="373" height="74.333333333333329"/>
+                            <rect key="frame" x="0.0" y="0.0" width="373" height="72"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Z74-Ed-9Il">
-                                    <rect key="frame" x="0.0" y="0.0" width="93.333333333333329" height="74.333333333333329"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="93.333333333333329" height="72"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="if5-bu-gNZ">
                                             <rect key="frame" x="21.666666666666671" y="0.0" width="50" height="50"/>
@@ -38,15 +43,15 @@
                                             <state key="normal" image="cdt.image.reward.circle"/>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rewards" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WGB-3I-8s5">
-                                            <rect key="frame" x="19.333333333333332" y="55.000000000000007" width="54.333333333333343" height="19.333333333333336"/>
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                            <rect key="frame" x="20.666666666666668" y="55" width="51.666666666666657" height="17"/>
+                                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="LHo-EQ-0CE">
-                                    <rect key="frame" x="93.333333333333343" y="0.0" width="93.333333333333343" height="74.333333333333329"/>
+                                    <rect key="frame" x="93.333333333333343" y="0.0" width="93.333333333333343" height="72"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vch-mK-Jsl">
                                             <rect key="frame" x="21.666666666666671" y="0.0" width="50" height="50"/>
@@ -58,15 +63,15 @@
                                             <state key="normal" image="cdt.image.brand.circle"/>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brands" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Esr-XP-S78">
-                                            <rect key="frame" x="24.333333333333339" y="55.000000000000007" width="44.666666666666657" height="19.333333333333336"/>
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                            <rect key="frame" x="25.333333333333332" y="55" width="42.333333333333343" height="17"/>
+                                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="fdF-0f-FsE">
-                                    <rect key="frame" x="186.66666666666666" y="0.0" width="92.999999999999972" height="74.333333333333329"/>
+                                    <rect key="frame" x="186.66666666666666" y="0.0" width="92.999999999999972" height="72"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2sq-qu-Ulh">
                                             <rect key="frame" x="21.333333333333343" y="0.0" width="50" height="50"/>
@@ -78,15 +83,15 @@
                                             <state key="normal" image="cdt.image.campaign.circle"/>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Campaigns" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sGc-U7-gB2">
-                                            <rect key="frame" x="10" y="55.000000000000007" width="73" height="19.333333333333336"/>
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                            <rect key="frame" x="11" y="55" width="71" height="17"/>
+                                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="HqM-ii-mlg">
-                                    <rect key="frame" x="279.66666666666669" y="0.0" width="93.333333333333314" height="74.333333333333329"/>
+                                    <rect key="frame" x="279.66666666666669" y="0.0" width="93.333333333333314" height="72"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9eP-tw-Tqo">
                                             <rect key="frame" x="21.666666666666629" y="0.0" width="50" height="50"/>
@@ -98,8 +103,8 @@
                                             <state key="normal" image="cdt.image.gift.circle"/>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gift" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="isQ-qE-TdS">
-                                            <rect key="frame" x="35.333333333333314" y="55.000000000000007" width="23" height="19.333333333333336"/>
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                            <rect key="frame" x="36.333333333333314" y="55" width="20.666666666666671" height="17"/>
+                                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -123,8 +128,8 @@
                                             <state key="normal" image="cdt.image.leaderboard.circle"/>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Leaderboard" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jA5-n4-KHx">
-                                            <rect key="frame" x="5" y="55" width="83" height="0.0"/>
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                            <rect key="frame" x="8" y="55" width="77.333333333333314" height="0.0"/>
+                                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -143,8 +148,8 @@
                                             <state key="normal" image="cdt.image.wishlist.circle"/>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wishlist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iaz-ke-KvW">
-                                            <rect key="frame" x="22.000000000000004" y="55" width="49.333333333333343" height="0.0"/>
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                            <rect key="frame" x="24.000000000000004" y="55" width="45.333333333333343" height="0.0"/>
+                                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -163,8 +168,8 @@
                                             <state key="normal" image="cdt.image.reward.circle"/>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Member  card" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lR8-QM-lAS">
-                                            <rect key="frame" x="17.333333333333346" y="55" width="58.333333333333343" height="0.0"/>
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                            <rect key="frame" x="19.666666666666682" y="55" width="53.666666666666657" height="0.0"/>
+                                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -183,8 +188,8 @@
                                             <state key="normal" image="cdt.image.exclusive.circle"/>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exclusive" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2zs-JE-vAn">
-                                            <rect key="frame" x="17.666666666666632" y="55" width="58.333333333333343" height="0.0"/>
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                            <rect key="frame" x="20.000000000000004" y="55" width="53.333333333333343" height="0.0"/>
+                                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>

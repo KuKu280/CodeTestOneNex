@@ -29,15 +29,30 @@ class HomeController: UIViewController {
             .receive(on: DispatchQueue.main)
             .sink { [weak self] items in
                 guard let self = self  else { return }
-                ib.promotionView.promotions = items.map { $0.title }
+                ib.promotionView.promotions = items.map {
+                    .init(
+                        name: $0.title,
+                        date: $0.updatedDate
+                    )
+                }
             }.store(in: &cancellable)
         
         viewModel.$articlesCategories
             .receive(on: DispatchQueue.main)
             .sink { [weak self] items in
                 guard let self = self  else { return }
-                ib.announcementView.annoncements = items.map { $0.name }
-                ib.newsletterView.newsletters = items.map { $0.name }
+                ib.announcementView.annoncements = items.map {
+                    .init(
+                        name: $0.name,
+                        date: $0.updatedDate
+                    )
+                }
+                ib.newsletterView.newsletters = items.map {
+                    .init(
+                        name: $0.name,
+                        date: $0.updatedDate
+                    )
+                }
             }.store(in: &cancellable)
     }
     

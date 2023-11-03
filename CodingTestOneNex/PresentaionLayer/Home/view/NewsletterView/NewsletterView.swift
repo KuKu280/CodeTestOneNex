@@ -11,12 +11,17 @@ class NewsletterView: NibBasedView {
     
     @IBOutlet private(set) var collectionView: UICollectionView!
     
-    var newsletters = [String]() {
+    var newsletters = [NewsLetter]() {
         didSet {
             collectionView.reloadData()
         }
     }
 
+    struct NewsLetter {
+        let name: String
+        let date: String
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         setupCollectionView()
@@ -66,7 +71,9 @@ extension NewsletterView: UICollectionViewDataSource {
         ) as? NewsletterItemCell else {
             return UICollectionViewCell()
         }
-        cell.render(title: newsletters[indexPath.row])
+        let newsletter = newsletters[indexPath.row]
+        cell.render(title: newsletter.name)
+        cell.render(date: newsletter.date)
         return cell
     }
     

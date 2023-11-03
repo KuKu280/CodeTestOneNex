@@ -11,10 +11,15 @@ class AnnouncementView: NibBasedView {
     
     @IBOutlet private(set) var tableView: UITableView!
     
-    var annoncements = [String]() {
+    var annoncements = [Announcement]() {
         didSet {
             tableView.reloadData()
         }
+    }
+    
+    struct Announcement {
+        let name: String
+        let date: String
     }
 
     override func awakeFromNib() {
@@ -54,8 +59,11 @@ extension AnnouncementView: UITableViewDataSource {
             withIdentifier: "itemcell",
             for: indexPath
         ) as! AnnouncementItemCell
+        cell.lineView.isHidden = indexPath.row == 1
         cell.selectionStyle = .none
-        cell.render(title: annoncements[indexPath.row])
+        let announcement = annoncements[indexPath.row]
+        cell.render(title: announcement.name)
+        cell.render(date: announcement.date)
         return cell
     }
 }

@@ -16,10 +16,15 @@ class PromotionView: NibBasedView {
         setupCollectionView()
     }
     
-    var promotions = [String]() {
+    var promotions = [Promotion]() {
         didSet {
             collectionView.reloadData()
         }
+    }
+    
+    struct Promotion {
+        let name: String
+        let date: String
     }
 
     private func setupCollectionView() {
@@ -66,7 +71,9 @@ extension PromotionView: UICollectionViewDataSource {
         ) as? PromotionItemCell else {
             return UICollectionViewCell()
         }
-        cell.render(title: promotions[indexPath.row])
+        let promotion = promotions[indexPath.row]
+        cell.render(title: promotion.name)
+        cell.render(date: promotion.date)
         return cell
     }
     

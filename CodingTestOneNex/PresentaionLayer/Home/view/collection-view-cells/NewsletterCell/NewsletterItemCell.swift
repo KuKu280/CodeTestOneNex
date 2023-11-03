@@ -10,6 +10,7 @@ import UIKit
 class NewsletterItemCell: NibBasedCollectionViewCell {
 
     @IBOutlet private var titleLabel: UILabel!
+    @IBOutlet private var dateLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,4 +21,7 @@ class NewsletterItemCell: NibBasedCollectionViewCell {
         titleLabel.text = title
     }
     
+    func render(date: String) {
+        dateLabel.text = date
+    }
 }

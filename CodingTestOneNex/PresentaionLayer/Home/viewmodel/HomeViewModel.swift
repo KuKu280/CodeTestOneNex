@@ -24,11 +24,29 @@ final class HomeViewModel {
         let id: Int
         let title: String
         let content: String
+        let updatedDate: String
     }
     
     struct ArticleCategories {
         let name: String
+        let updatedDate: String
     }
+    
+    lazy var dateFormatter1: DateFormatter = {
+       var formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"
+        formatter.calendar = Calendar(identifier: .gregorian)
+        formatter.locale = Locale(identifier: "en_US_POSIX")
+        return formatter
+    }()
+    
+    lazy var dateFormatter: DateFormatter = {
+       var formatter = DateFormatter()
+        formatter.dateFormat = "d MMM"
+        formatter.calendar = Calendar(identifier: .gregorian)
+        formatter.locale = Locale(identifier: "en_US_POSIX")
+        return formatter
+    }()
     
     func fetchAPI() {
         fetchLogin()
@@ -63,7 +81,8 @@ final class HomeViewModel {
                     .init(
                         id: $0.id ?? 0,
                         title: $0.title ?? "",
-                        content: $0.content ?? ""
+                        content: $0.content ?? "",
+                        updatedDate: self.convertDateFormat(from: $0.updatedAt ?? "")
                     )
                 }
                 self.didFetchingCompleted.send()
@@ -80,7 +99,8 @@ final class HomeViewModel {
                 let article = response.data.map { $0.value }
                 self.articlesCategories = article.map {
                     .init(
-                        name: $0.name ?? ""
+                        name: $0.name ?? "",
+                        updatedDate: self.convertDateFormat(from: $0.updatedAt ?? "")
                     )
                 }
                 self.didFetchingCompleted.send()
@@ -88,6 +108,13 @@ final class HomeViewModel {
                 self.didFetchingFailed.send(error.localizedDescription)
             }
         }
+    }
+    
+    private func convertDateFormat(from endDate: String) -> String {
+        guard let date = dateFormatter1.date(from: endDate) else {
+            return "_"
+        }
+        return dateFormatter.string(from: date)
     }
     
 }

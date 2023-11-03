@@ -10,10 +10,12 @@ import UIKit
 class SpecialPromotionView: NibBasedControl {
     
     @IBOutlet private(set) var collectionView: UICollectionView!
+    @IBOutlet private(set) var pageControl: UIPageControl!
 
     override func awakeFromNib() {
         super.awakeFromNib()
         setupCollectionView()
+        setupPageControl()
     }
     
     private func setupCollectionView() {
@@ -23,6 +25,16 @@ class SpecialPromotionView: NibBasedControl {
         )
         collectionView.delegate = self
         collectionView.dataSource = self
+        
+    }
+    
+    private func setupPageControl() {
+        pageControl.numberOfPages = 5
+        
+//        pageControl.preferredIndicatorImage = UIImage(named: "dot")
+        pageControl.setIndicatorImage(UIImage(named: "dot"), forPage: 0)
+//        let startPage = 0  // Assume the 1st page is the start page
+//        pageControl.setIndicatorImage(UIImage(named: "dot"), forPage: startPage)
     }
 
 }
@@ -38,6 +50,19 @@ extension SpecialPromotionView: UICollectionViewDelegateFlowLayout {
             height: collectionView.frame.height
         )
     }
+    
+    func scrollViewDidEndScrollingAnimation(
+        _ scrollView: UIScrollView
+    ) {
+        pageControl.currentPage = Int(scrollView.contentOffset.x) / Int(scrollView.frame.width)
+    }
+    
+    func scrollViewDidEndDecelerating(
+        _ scrollView: UIScrollView
+    ) {
+        pageControl.currentPage = Int(scrollView.contentOffset.x) / Int(scrollView.frame.width)
+    }
+    
 }
 
 extension SpecialPromotionView: UICollectionViewDataSource {

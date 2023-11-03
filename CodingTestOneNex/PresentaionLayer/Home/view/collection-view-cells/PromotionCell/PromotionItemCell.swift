@@ -10,7 +10,7 @@ import UIKit
 class PromotionItemCell: NibBasedCollectionViewCell {
     
     @IBOutlet private var titleLabel: UILabel!
-    
+    @IBOutlet private var dateLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -19,5 +19,9 @@ class PromotionItemCell: NibBasedCollectionViewCell {
 
     func render(title: String) {
         titleLabel.text = title
+    }
+    
+    func render(date: String) {
+        dateLabel.text = date
     }
 }

@@ -10,6 +10,8 @@ import UIKit
 class AnnouncementItemCell: NibBasedTableViewCell {
 
     @IBOutlet private var titleLabel: UILabel!
+    @IBOutlet private var dateLabel: UILabel!
+    @IBOutlet weak var lineView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,5 +26,9 @@ class AnnouncementItemCell: NibBasedTableViewCell {
     
     func render(title: String) {
         titleLabel.text = title
+    }
+    
+    func render(date: String) {
+        dateLabel.text = date
     }
 }

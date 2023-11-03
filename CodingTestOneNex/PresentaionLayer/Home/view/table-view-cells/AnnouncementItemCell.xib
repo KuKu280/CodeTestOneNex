@@ -7,9 +7,16 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AnnouncementItemCell" customModule="CodingTestOneNex" customModuleProvider="target">
             <connections>
+                <outlet property="dateLabel" destination="YZh-zh-VkU" id="EsV-37-PnG"/>
+                <outlet property="lineView" destination="OzF-bk-gVy" id="yEY-4C-4jP"/>
                 <outlet property="titleLabel" destination="zEa-iM-8CL" id="nfL-76-VNZ"/>
             </connections>
         </placeholder>
@@ -19,24 +26,24 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ymK-h7-g93">
-                    <rect key="frame" x="15" y="10" width="363" height="41.333333333333336"/>
+                    <rect key="frame" x="20" y="10" width="353" height="42.333333333333336"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1st May" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YZh-zh-VkU">
-                            <rect key="frame" x="0.0" y="0.0" width="363" height="19.333333333333332"/>
-                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                            <rect key="frame" x="0.0" y="0.0" width="353" height="19.666666666666668"/>
+                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
                             <color key="textColor" systemColor="systemIndigoColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jo malone london's mother's day " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zEa-iM-8CL">
-                            <rect key="frame" x="0.0" y="19.333333333333332" width="363" height="21.999999999999996"/>
-                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
+                            <rect key="frame" x="0.0" y="19.666666666666664" width="353" height="22.666666666666664"/>
+                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
                 </stackView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OzF-bk-gVy">
-                    <rect key="frame" x="15" y="62" width="363" height="1"/>
+                    <rect key="frame" x="20" y="62" width="353" height="1"/>
                     <color key="backgroundColor" systemColor="systemGray6Color"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="1" id="HJo-3K-ABW"/>
@@ -46,16 +53,16 @@
             <viewLayoutGuide key="safeArea" id="4JW-Uw-YHT"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="OzF-bk-gVy" firstAttribute="leading" secondItem="Uit-Ex-hWO" secondAttribute="leading" constant="15" id="ATQ-g1-1jh"/>
+                <constraint firstItem="OzF-bk-gVy" firstAttribute="leading" secondItem="Uit-Ex-hWO" secondAttribute="leading" constant="20" id="ATQ-g1-1jh"/>
                 <constraint firstAttribute="bottom" secondItem="OzF-bk-gVy" secondAttribute="bottom" id="JX4-uD-Xpc"/>
                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ymK-h7-g93" secondAttribute="bottom" constant="10" id="cmd-rZ-arK"/>
-                <constraint firstAttribute="trailing" secondItem="OzF-bk-gVy" secondAttribute="trailing" constant="15" id="eYM-5Z-jfF"/>
-                <constraint firstItem="ymK-h7-g93" firstAttribute="leading" secondItem="4JW-Uw-YHT" secondAttribute="leading" constant="15" id="iZD-JE-X5b"/>
+                <constraint firstAttribute="trailing" secondItem="OzF-bk-gVy" secondAttribute="trailing" constant="20" id="eYM-5Z-jfF"/>
+                <constraint firstItem="ymK-h7-g93" firstAttribute="leading" secondItem="4JW-Uw-YHT" secondAttribute="leading" constant="20" id="iZD-JE-X5b"/>
                 <constraint firstItem="ymK-h7-g93" firstAttribute="top" secondItem="Uit-Ex-hWO" secondAttribute="top" constant="10" id="tyh-eZ-O1f"/>
-                <constraint firstItem="4JW-Uw-YHT" firstAttribute="trailing" secondItem="ymK-h7-g93" secondAttribute="trailing" constant="15" id="zoS-dt-vTX"/>
+                <constraint firstItem="4JW-Uw-YHT" firstAttribute="trailing" secondItem="ymK-h7-g93" secondAttribute="trailing" constant="20" id="zoS-dt-vTX"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="-199.23664122137404" y="75.704225352112687"/>
+            <point key="canvasLocation" x="-680" y="20"/>
         </view>
     </objects>
     <resources>
