@@ -9,6 +9,8 @@ import UIKit
 
 class AnnouncementItemCell: NibBasedTableViewCell {
 
+    @IBOutlet private var titleLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -20,4 +22,7 @@ class AnnouncementItemCell: NibBasedTableViewCell {
         // Configure the view for the selected state
     }
     
+    func render(title: String) {
+        titleLabel.text = title
+    }
 }

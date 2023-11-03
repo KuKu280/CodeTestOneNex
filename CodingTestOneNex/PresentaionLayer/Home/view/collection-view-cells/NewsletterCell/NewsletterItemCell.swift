@@ -9,11 +9,15 @@ import UIKit
 
 class NewsletterItemCell: NibBasedCollectionViewCell {
 
+    @IBOutlet private var titleLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
-   
+    func render(title: String) {
+        titleLabel.text = title
+    }
     
 }

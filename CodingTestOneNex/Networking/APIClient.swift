@@ -91,9 +91,29 @@ class APIClient {
         completion: @escaping (
             Result<LoginResponse, Error>
         ) -> Void) {
-        performRequest(
-            router: .login(loginRequest),
-            completion: completion
-        )
-    }
+            performRequest(
+                router: .login(loginRequest),
+                completion: completion
+            )
+        }
+    
+    static func getArticle(
+        completion: @escaping(
+            Result<ArticleResponse, Error>
+        ) -> Void) {
+            performRequest(
+                router: .getArticle,
+                completion: completion
+            )
+        }
+    
+    static func getArticleCategories(
+        completion: @escaping(
+            Result<ArticleResponse, Error>
+        ) -> Void) {
+            performRequest(
+                router: .getArtcileCategories,
+                completion: completion
+            )
+        }
 }

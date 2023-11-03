@@ -10,6 +10,8 @@ import Foundation
 enum APIRouter: APIConfiguration {
 
     case login(_ loginRequest: LoginRequest)
+    case getArticle
+    case getArtcileCategories
 
     var urlComponents: URLComponents {
         var urlComponents = URLComponents()
@@ -22,6 +24,10 @@ enum APIRouter: APIConfiguration {
         switch self {
         case .login:
             return .post
+        case .getArticle:
+            return .get
+        case .getArtcileCategories:
+            return .get
         }
     }
     
@@ -29,6 +35,10 @@ enum APIRouter: APIConfiguration {
         switch self {
         case .login:
             return "/api/auth/login"
+        case .getArticle:
+            return "/api/articles"
+        case .getArtcileCategories:
+            return "/api/articles/categories"
         }
     }
     
@@ -40,11 +50,18 @@ enum APIRouter: APIConfiguration {
         switch self {
         case .login(let loginRequest):
             return loginRequest.asDictionary
+        case .getArticle, .getArtcileCategories:
+            return nil
         }
     }
 
     var isToken: Bool {
-        return false
+        switch self {
+        case .login:
+            return false
+        case .getArticle, .getArtcileCategories:
+            return true
+        }
     }
     
     func asURLRequest() throws -> URLRequest {

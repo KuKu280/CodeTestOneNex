@@ -164,10 +164,10 @@
                     <rect key="frame" x="0.0" y="224" width="393" height="1076"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tyE-eu-b5f">
-                            <rect key="frame" x="0.0" y="0.0" width="393" height="1115"/>
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="1145"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="5Pm-Ag-EF9">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="1115"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="1145"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NXd-5M-ago">
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="235"/>
@@ -221,10 +221,10 @@
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HXW-jM-dCU" customClass="NewsletterView" customModule="CodingTestOneNex" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="815" width="393" height="300"/>
+                                            <rect key="frame" x="0.0" y="815" width="393" height="330"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="300" id="z2z-LP-s50"/>
+                                                <constraint firstAttribute="height" constant="330" id="z2z-LP-s50"/>
                                             </constraints>
                                         </view>
                                     </subviews>
@@ -263,11 +263,14 @@
                 <constraint firstItem="zvW-FU-Az8" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="xQM-HZ-gwl"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="-3062" y="-710"/>
+            <point key="canvasLocation" x="-3390" y="-955"/>
         </view>
         <customObject id="dv0-Xo-z58" customClass="HomeController_IB" customModule="CodingTestOneNex" customModuleProvider="target">
             <connections>
+                <outlet property="announcementView" destination="P25-Jr-LDw" id="uEV-MC-VPJ"/>
                 <outlet property="bannerView" destination="YYD-Ik-vSf" id="tSf-fK-ZFW"/>
+                <outlet property="newsletterView" destination="HXW-jM-dCU" id="ZEv-jH-8CX"/>
+                <outlet property="promotionView" destination="QSf-Pz-Xfn" id="Qym-iz-yYA"/>
                 <outlet property="toggleButton" destination="81u-kF-lb4" id="hxR-Zf-sWw"/>
                 <outlet property="welcomeContainerView" destination="V3F-xw-l6y" id="QwK-Qk-eFB"/>
             </connections>

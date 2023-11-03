@@ -10,6 +10,12 @@ import UIKit
 class AnnouncementView: NibBasedView {
     
     @IBOutlet private(set) var tableView: UITableView!
+    
+    var annoncements = [String]() {
+        didSet {
+            tableView.reloadData()
+        }
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -40,7 +46,7 @@ extension AnnouncementView: UITableViewDelegate {
 extension AnnouncementView: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return min(2,annoncements.count)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -49,6 +55,7 @@ extension AnnouncementView: UITableViewDataSource {
             for: indexPath
         ) as! AnnouncementItemCell
         cell.selectionStyle = .none
+        cell.render(title: annoncements[indexPath.row])
         return cell
     }
 }

@@ -15,6 +15,12 @@ class PromotionView: NibBasedView {
         super.awakeFromNib()
         setupCollectionView()
     }
+    
+    var promotions = [String]() {
+        didSet {
+            collectionView.reloadData()
+        }
+    }
 
     private func setupCollectionView() {
         collectionView.register(
@@ -47,7 +53,7 @@ extension PromotionView: UICollectionViewDataSource {
         _ collectionView: UICollectionView,
         numberOfItemsInSection section: Int
     ) -> Int {
-        return 5
+        return promotions.count
     }
     
     
@@ -60,7 +66,7 @@ extension PromotionView: UICollectionViewDataSource {
         ) as? PromotionItemCell else {
             return UICollectionViewCell()
         }
-      
+        cell.render(title: promotions[indexPath.row])
         return cell
     }
     

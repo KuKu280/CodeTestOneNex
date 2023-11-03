@@ -24,6 +24,8 @@
 		7850F21C2AF4E8EA00AB6AFA /* NibLoadableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7850F20F2AF4E8EA00AB6AFA /* NibLoadableViewProtocol.swift */; };
 		7850F21D2AF4E8EA00AB6AFA /* NibBasedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7850F2112AF4E8EA00AB6AFA /* NibBasedCollectionViewCell.swift */; };
 		7850F21E2AF4E8EA00AB6AFA /* NibBasedCollectionViewReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7850F2122AF4E8EA00AB6AFA /* NibBasedCollectionViewReusableView.swift */; };
+		7850F2212AF4EA7B00AB6AFA /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7850F2202AF4EA7B00AB6AFA /* HomeViewModel.swift */; };
+		7850F2232AF4EFD500AB6AFA /* ArticleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7850F2222AF4EFD500AB6AFA /* ArticleResponse.swift */; };
 		786F67D52AF363EF004E59F7 /* MainAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786F67D42AF363EF004E59F7 /* MainAppDelegate.swift */; };
 		786F67D72AF363EF004E59F7 /* MainSceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786F67D62AF363EF004E59F7 /* MainSceneDelegate.swift */; };
 		786F67DE2AF363EF004E59F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 786F67DD2AF363EF004E59F7 /* Assets.xcassets */; };
@@ -79,6 +81,8 @@
 		7850F20F2AF4E8EA00AB6AFA /* NibLoadableViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadableViewProtocol.swift; sourceTree = "<group>"; };
 		7850F2112AF4E8EA00AB6AFA /* NibBasedCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibBasedCollectionViewCell.swift; sourceTree = "<group>"; };
 		7850F2122AF4E8EA00AB6AFA /* NibBasedCollectionViewReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibBasedCollectionViewReusableView.swift; sourceTree = "<group>"; };
+		7850F2202AF4EA7B00AB6AFA /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		7850F2222AF4EFD500AB6AFA /* ArticleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleResponse.swift; sourceTree = "<group>"; };
 		786F67D12AF363EF004E59F7 /* CodingTestOneNex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodingTestOneNex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		786F67D42AF363EF004E59F7 /* MainAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAppDelegate.swift; sourceTree = "<group>"; };
 		786F67D62AF363EF004E59F7 /* MainSceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSceneDelegate.swift; sourceTree = "<group>"; };
@@ -156,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				7850F1F52AF4E8D000AB6AFA /* LoginResponse.swift */,
+				7850F2222AF4EFD500AB6AFA /* ArticleResponse.swift */,
 			);
 			path = response;
 			sourceTree = "<group>";
@@ -233,6 +238,14 @@
 				7850F2122AF4E8EA00AB6AFA /* NibBasedCollectionViewReusableView.swift */,
 			);
 			path = "collection-view";
+			sourceTree = "<group>";
+		};
+		7850F21F2AF4EA7000AB6AFA /* viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+				7850F2202AF4EA7B00AB6AFA /* HomeViewModel.swift */,
+			);
+			path = viewmodel;
 			sourceTree = "<group>";
 		};
 		786F67C82AF363EF004E59F7 = {
@@ -366,6 +379,7 @@
 		786F68432AF3A14B004E59F7 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				7850F21F2AF4EA7000AB6AFA /* viewmodel */,
 				78B65E2C2AF3D04A0028B84A /* view */,
 				786F68442AF3A14F004E59F7 /* controller */,
 			);
@@ -649,6 +663,8 @@
 				7850F2152AF4E8EA00AB6AFA /* CustomizedSearchBar.swift in Sources */,
 				78B65E4E2AF4129D0028B84A /* SpecialpromotionItemCell.swift in Sources */,
 				7850F2192AF4E8EA00AB6AFA /* NibBasedTableViewHeaderFooterView.swift in Sources */,
+				7850F2212AF4EA7B00AB6AFA /* HomeViewModel.swift in Sources */,
+				7850F2232AF4EFD500AB6AFA /* ArticleResponse.swift in Sources */,
 				786F684A2AF3A1BA004E59F7 /* DashboardNavigationController.swift in Sources */,
 				7850F1FE2AF4E8D000AB6AFA /* LoginRequest.swift in Sources */,
 				786F68512AF3AB4F004E59F7 /* UIImage+Ext.swift in Sources */,

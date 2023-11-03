@@ -10,6 +10,12 @@ import UIKit
 class NewsletterView: NibBasedView {
     
     @IBOutlet private(set) var collectionView: UICollectionView!
+    
+    var newsletters = [String]() {
+        didSet {
+            collectionView.reloadData()
+        }
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -47,7 +53,7 @@ extension NewsletterView: UICollectionViewDataSource {
         _ collectionView: UICollectionView,
         numberOfItemsInSection section: Int
     ) -> Int {
-        return 3
+        return newsletters.count
     }
     
     
@@ -60,7 +66,7 @@ extension NewsletterView: UICollectionViewDataSource {
         ) as? NewsletterItemCell else {
             return UICollectionViewCell()
         }
-      
+        cell.render(title: newsletters[indexPath.row])
         return cell
     }
     

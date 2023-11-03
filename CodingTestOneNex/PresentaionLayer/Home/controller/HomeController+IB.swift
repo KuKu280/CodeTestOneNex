@@ -16,6 +16,10 @@ final class HomeController_IB: NSObject {
     @IBOutlet private(set) var welcomeContainerView: UIView!
     @IBOutlet private(set) var bannerView: BannerView!
     @IBOutlet private(set) var toggleButton: UIButton!
+    @IBOutlet private(set) var promotionView: PromotionView!
+    @IBOutlet private(set) var announcementView: AnnouncementView!
+    @IBOutlet private(set) var newsletterView: NewsletterView!
+    
     
     func setupUI() {
         welcomeContainerView.dropShadow()
