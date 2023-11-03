@@ -23,7 +23,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zvW-FU-Az8">
                     <rect key="frame" x="0.0" y="0.0" width="393" height="180"/>
                     <subviews>
-                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Oy2-Fw-3kb" customClass="CustomizedSearchBar" customModule="UIComponents">
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Oy2-Fw-3kb" customClass="CustomizedSearchBar" customModule="CodingTestOneNex" customModuleProvider="target">
                             <rect key="frame" x="75" y="66" width="243" height="48"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="48" id="h3y-hA-vpY"/>
@@ -263,7 +263,7 @@
                 <constraint firstItem="zvW-FU-Az8" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="xQM-HZ-gwl"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="-3390" y="-955"/>
+            <point key="canvasLocation" x="-3711" y="-992"/>
         </view>
         <customObject id="dv0-Xo-z58" customClass="HomeController_IB" customModule="CodingTestOneNex" customModuleProvider="target">
             <connections>

@@ -19,23 +19,45 @@ class DashboardTabBarController: UITabBarController {
         super.init(coder: coder)
     }
     
+    var upperLineView: UIView!
+       
+    let spacing: CGFloat = 12
+    
     var dashboardTabBar: DashboardTabBar! {
         tabBar as? DashboardTabBar
     }
     
-    override var delegate: UITabBarControllerDelegate? {
-        set { }
-        get { self }
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
+        self.delegate = self
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2){
+            self.addTabbarIndicatorView(index: 0, isFirstTime: true)
+        }
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
+    }
+    
+    ///Add tabbar item indicator uper line
+    func addTabbarIndicatorView(index: Int, isFirstTime: Bool = false){
+        guard let tabView = tabBar.items?[index].value(forKey: "view") as? UIView else {
+            return
+        }
+        if !isFirstTime{
+            upperLineView.removeFromSuperview()
+        }
+        upperLineView = UIView(
+            frame: CGRect(
+                x: tabView.frame.minX + spacing,
+                y: tabView.frame.minY + 0.1,
+                width: tabView.frame.size.width - spacing * 2,
+                height: 4
+            )
+        )
+        upperLineView.backgroundColor = .CDT.DS.legacyColor
+        upperLineView.roundCorners(corners: [.bottomLeft,.bottomRight], radius: 4.0)
+        tabBar.addSubview(upperLineView)
     }
     
     private func setup() {
@@ -47,7 +69,7 @@ class DashboardTabBarController: UITabBarController {
         let tabbar = DashboardTabBar()
         setValue(tabbar, forKey:"tabBar")
         tabBar.tintColor = .CDT.DS.legacyColor
-        
+
         tabBar.backgroundColor = .clear
         tabBar.backgroundImage = .from(color: .clear)
         tabBar.shadowImage = .from(color: .clear)
@@ -56,7 +78,10 @@ class DashboardTabBarController: UITabBarController {
     
     private func configureSubControllers() {
         addHomeController()
-        addHomeController()
+        addDiscoverController()
+        addCollectController()
+        addPocketController()
+        addSettingController()
     }
     
     private func addHomeController() {
@@ -66,6 +91,50 @@ class DashboardTabBarController: UITabBarController {
                 title: "Home",
                 image: UIImage(systemName: "house.fill"),
                 selectedImage: UIImage(systemName: "house.fill")
+            )
+        )
+    }
+    
+    private func addDiscoverController() {
+        add(
+            UIViewController(),
+            tabBarItem: UITabBarItem(
+                title: "Discover",
+                image: UIImage(systemName: "safari"),
+                selectedImage: UIImage(systemName: "safari.fill")
+            )
+        )
+    }
+    
+    private func addCollectController() {
+        add(
+            UIViewController(),
+            tabBarItem: UITabBarItem(
+                title: "Collect/Pay",
+                image: UIImage(systemName: "qrcode.viewfinder"),
+                selectedImage: UIImage(systemName: "qrcode.viewfinder")
+            )
+        )
+    }
+    
+    private func addPocketController() {
+        add(
+            UIViewController(),
+            tabBarItem: UITabBarItem(
+                title: "My Pocket",
+                image: UIImage(systemName: "wallet.pass"),
+                selectedImage: UIImage(systemName: "wallet.pass.fill")
+            )
+        )
+    }
+    
+    private func addSettingController() {
+        add(
+            UIViewController(),
+            tabBarItem: UITabBarItem(
+                title: "Setting",
+                image: UIImage(systemName: "gearshape"),
+                selectedImage: UIImage(systemName: "gearshape.fill")
             )
         )
     }
@@ -89,26 +158,10 @@ class DashboardTabBarController: UITabBarController {
 }
 
 extension DashboardTabBarController: UITabBarControllerDelegate {
-    
     func tabBarController(
         _ tabBarController: UITabBarController,
-        shouldSelect viewController: UIViewController
-    ) -> Bool {
-        
-        guard let fromView = selectedViewController?.view
-        else { return false }
-        
-        guard let toView = viewController.view
-        else { return false }
-        
-        if fromView != toView {
-            UIView.transition(
-                from: fromView, to: toView, duration: 0.25,
-                options: [.transitionCrossDissolve],
-                completion: nil
-            )
-        }
-        
-        return true
+        didSelect viewController: UIViewController
+    ) {
+        addTabbarIndicatorView(index: self.selectedIndex)
     }
 }
