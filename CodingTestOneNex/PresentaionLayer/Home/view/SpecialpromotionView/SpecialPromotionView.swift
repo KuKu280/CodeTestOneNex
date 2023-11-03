@@ -30,11 +30,6 @@ class SpecialPromotionView: NibBasedControl {
     
     private func setupPageControl() {
         pageControl.numberOfPages = 5
-        
-//        pageControl.preferredIndicatorImage = UIImage(named: "dot")
-        pageControl.setIndicatorImage(UIImage(named: "dot"), forPage: 0)
-//        let startPage = 0  // Assume the 1st page is the start page
-//        pageControl.setIndicatorImage(UIImage(named: "dot"), forPage: startPage)
     }
 
 }
